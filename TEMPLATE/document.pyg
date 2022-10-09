@@ -1,0 +1,13 @@
+		std::vector<std::pair<double, geometry_msgs::Transform>> partDistList;
+		partDistList.resize(lastPickPoseVect.size());
+		int counter = 0;
+		double distance = 0.0;
+		for(auto it = lastPickPoseVect.begin(); it != lastPickPoseVect.end(); it++) {
+			tf::Transform tmpPose;
+			tf::transformMsgToTF(*it, tmpPose);
+			distance = lastPickPose.getOrigin().distance(tmpPose.getOrigin());
+			// put the distance and the pose to the partDistList
+			partDistList[counter].first = distance;
+		partDistList[counter].second = *it;
+		counter++;
+		}

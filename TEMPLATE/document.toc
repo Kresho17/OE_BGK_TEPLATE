@@ -1,0 +1,3 @@
+\select@language {magyar} \contentsline {section}{\numberline {1}Bevezetés}{2}{section.1}%
+\select@language {magyar} \contentsline {section}{Ábrajegyzék}{3}{section.1}%
+\select@language {magyar} \contentsline {section}{Táblazatok jegyzéke}{4}{section.1}%

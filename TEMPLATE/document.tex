@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{oeNIKstyle}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[titletoc]{appendix}
+\usepackage{pdfpages}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fontawesome} % egyedi listajelekhez például
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+
+\usepackage{minted}
+\usemintedstyle{tango}
+\usepackage{verbatim}
+
+%\usepackage[T1]{fontenc}
+\usepackage[magyar]{babel} % magyarra nyelvi csomag
+
+\setlength{\parindent}{0 mm} % behúzás mértékét állíthatjuk be
+
+% megadandó adatok
+\author{Tamási Máté István}
+\torzsKonyvSzam{T/xxxxxx/xxxxxx/x}
+\neptunNumber{QIUP6T}
+
+% lehetne egy változóban, de akkor nem tudjuk kontrolállni, hogy hogyan legyen megtörve.
+\hunTitleFirstRow{Automatizált CI/CD infrastruktúra tervezése és fejlesztése biztonságkritikus beágyazott szoftverfejlesztéshez}
+
+\engTitleFirstRow{Design and development of an automated CI/CD infrastructure for security-critical embedded software development}
+
+
+\supervisor{Dr. Johanyák Zsolt Csaba}
+\consultant{Sárkány Norbert}
+
+\deadlineDate{2022. December 10.}
+\terminationDate{2022. December 10.}
+
+% Beállítások
+% első változó: a számozás helye 1 = jobb oldal, 2 = középen
+% második változó: mutassa-e az összes oldalt. 0 = nem, 1 = igen.
+\setPageNumbering{1}{0}
+
+% set the page style
+\makedefaultpagestyle
+
+%TODO hivatkozások előtt space-t hagyni
+%TODO képeknél hivatkozást zárójelbe rakni: (Forrás:cite)
+%TODO XMl szekvencia diagram készítése a teljes folyamat leírására
+%TODO hivatkozások javítása
+
+\begin{document}
+	\maketitle
+	\makeassigmentpage
+	% a feladat és a tartalmazandók listája a lennti két fájlból töltendő be
+	\makeassigmentpagetwo{theassigment}{themustbeinassigment}
+	\makedeclaration
+	\setcounter{page}{1} % start counting pages from here
+	\setalgorithmcounter % set up algorithm numbering
+	
+	\maketoc
+	
+	\section{Bevezetés}
+	\include{chapters/chapter1.tex}
+	\include{chapters/chapter2.tex}
+	\include{chapters/chapter3.tex}
+	\include{chapters/chapter4.tex}
+	\include{chapters/chapter5.tex}
+	
+ \makebibliography
+\makefigures
+\maketables
+	
+\appendix
+	
+\section*{Függelék}
+	
+\end{document}
+
